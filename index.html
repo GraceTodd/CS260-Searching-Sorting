@@ -120,12 +120,38 @@
           large lists, however, sorting even once can be so expensive that simply performing a sequential search
           from the start may be the best choice. </p>
           
+          <p>Here is an example of two ways to implement teh binary search in Python, both iteratively and 
+            recursively:</p>
+          
+          <iframe src="https://pastebin.com/embed_iframe/xEx1WYQM" style="border:none;width:100%;height:1000px"></iframe>
+          
           <h3>Hashing</h3>
           <p>Hashing is a data structure that can be searched in O(1) time. In order to do this, we will need to 
             know even more about where the items might be when we go to look for them in the collection. If every 
             item is where it should be, then the search can use a single comparison to discover the presence of 
             an item. However, this is not typically the case. </p>
             
+          <p>With hashing, you do not need to actually search to get a result. Hashing is done by creating a hash 
+            table, which contains slots that each hold an item that is names by an integer value. For example, we will
+            have a slot named 0, a slot named 1, a slot named 2, and so on.</p>
+          
+          <p>We can implement a hash table in Python by using a list with each element initialized to the special 
+            Python value NONE. The mappign between an item and the slot where that item belongs in the hash table 
+            is called the hash function. The hash function will take any item in the collection and return an 
+            integer in the range of slot name, between 0 and (m - 1). Our first hash function, sometimes referred
+            to as the "Remainder Moethod," simply takes an item and divides it by the table size, returning the 
+            remainder as its hash value. (h(item) = item % 11). Once the hash values have been computed, we can
+          insert each item into the hash table at the designated position. This is referred to as the load factor, 
+            and is commonly denotes by [lamda] = (numberofitems)/(tablesize).</p>
+          
+          <p>When we want to search fro an item, we simply use the hash function to compute the slot name for the 
+            item and then check the hash table to see if it is present. Hashing is a data structure that can search 
+            in O(1) time, since a constant amount of time is required to compute the hash value and then index the 
+            hash table at that location.</p>
+          
+          <p>Here is a great video that elaborates on the usefulness of Hash Tables:</p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/shs0KM3wKv8" 
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           
           <!-- <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p> -->
             
