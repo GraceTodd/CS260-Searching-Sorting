@@ -85,6 +85,20 @@
           <p> However, there are other, more explicitly stated functions that can be implemented into a Python 
           program specifically. For instance, the Sequential Search. </p>
           
+          <h3>The Sequential Search</h3>
+          <p>When data items are stored in a collection such as a list, we say that they have a linear or sequential 
+          relationship. Each data item is stored in a position relative to the others. In Python lists, these relative positions are the index values
+          of the individual items. Since these index values are ordered, it is possible for us to visit them in sequence.
+          This process gives rise to our first searching technique, the sequential search.</p>
+          <p>If the item is present within the list, the complexity of the sequential search is O(1) at best and O(n)
+          at worst. If the item is not present, the complexity will only be O(n).</p>
+          
+          <iframe src="https://pastebin.com/embed_iframe/rubiunw5" style="border:none;width:100%"></iframe>
+          
+          <p>Because the function orderedSequentialSearch searches an ordered list, we can use the other values in the list to 
+          decide whether or not we have passed where the value should be. For instance, if we are searching for the value
+          5 but our sequential search function has found the value 7, our function can postulate that the list does not
+          hold a value of 5.</p>
           
           <h3>The Binary Search</h3>
           
