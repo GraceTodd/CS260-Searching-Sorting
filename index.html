@@ -93,7 +93,7 @@
           <p>If the item is present within the list, the complexity of the sequential search is O(1) at best and O(n)
           at worst. If the item is not present, the complexity will only be O(n).</p>
           
-          <iframe src="https://pastebin.com/embed_iframe/rubiunw5" style="border:none;width:100%"></iframe>
+          <iframe src="https://pastebin.com/embed_iframe/rubiunw5" style="border:none;width:100%;height:500px"></iframe>
           
           <p>Because the function orderedSequentialSearch searches an ordered list, we can use the other values in the list to 
           decide whether or not we have passed where the value should be. For instance, if we are searching for the value
@@ -101,10 +101,36 @@
           hold a value of 5.</p>
           
           <h3>The Binary Search</h3>
+          <p>It is possible to take greater advantage of the ordered list if we are clever with our comparisons.
+          In the sequential search, when we compare against the first item, there are at most n - 1 more items 
+          to look through if the first item is not what we are looking for. Instead of searching a list in 
+          sequence, a BINARY SEARCH will start by examining the middle term. I fthat item is the one we are
+          searching for, we are done. If it is not the correct item, we can use the ordered nature of the list 
+          to eliminate half of the remaining items. If the item we are searching for is greater than the middle 
+          item, we know that the entire lower half of the list as well as the middle item can be eliminated from 
+          further consideration.</p>
+          
+          <p>One of the drawbacks of a binary search is that because it searches directly based on whether or not
+          the selected term is greater than or less than the sought out item, it cannot be done on an unordered list.
+          If we start with a sorted list of n items, about (n/2) items will be left after the first comparison. After
+          the second comparison, there will be about (n/4), then (n/8), and so on. The maximum number of comparisons 
+          is logarithmic with respect to the number of items in the list. Therefore teh binary search is O(log n).
+          For this reason, it is important to note that for small values of n, the additional cost of sorting is
+          probably not worth it, even though a binary search is generally better than a sequential search. Even for 
+          large lists, however, sorting even once can be so expensive that simply performing a sequential search
+          from the start may be the best choice. </p>
+          
+          <h3>Hashing</h3>
+          <p>Hashing is a data structure that can be searched in O(1) time. In order to do this, we will need to 
+            know even more about where the items might be when we go to look for them in the collection. If every 
+            item is where it should be, then the search can use a single comparison to discover the presence of 
+            an item. However, this is not typically the case. </p>
+            
           
           <!-- <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p> -->
             
           <h2>Sorting</h2>
+          <p>There are many different ways to sort </p>
           <iframe width="560" height="315" src="https://www.youtube.com/embed/kPRA0W1kECg" frameborder="0" 
           allow="autoplay; encrypted-media" allowfullscreen></iframe>
             
